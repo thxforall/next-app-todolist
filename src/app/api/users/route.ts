@@ -1,8 +1,11 @@
-import { PrismaClient } from '@prisma/client';
+// import { PrismaClient } from '@prisma/client';
+// const prisma = new PrismaClient();
+
+// 대신 중앙 클라이언트 사용
+import prisma from '@/lib/prisma';
+
 import { NextRequest, NextResponse } from 'next/server';
 import { hash } from 'bcrypt';
-
-const prisma = new PrismaClient();
 
 export async function GET() {
   try {
